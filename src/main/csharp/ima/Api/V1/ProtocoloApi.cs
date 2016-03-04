@@ -13,30 +13,30 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre protocolo O recurso de protocolo existe para fornecer informaÃ§Ãµes sobre protocolos gerados pela prefeitura.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProtocoloResponse></returns>
-    List<ProtocoloResponse> ProtocoloGet (string AccessToken, string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso);
+    List<ProtocoloResponse> ProtocoloGet (string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Dados sobre protocolo O recurso de protocolo existe para fornecer informaÃ§Ãµes sobre protocolos gerados pela prefeitura.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProtocoloResponse></returns>
-    Task<List<ProtocoloResponse>> ProtocoloGetAsync (string AccessToken, string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso);
+    Task<List<ProtocoloResponse>> ProtocoloGetAsync (string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Dados sobre um protocolo especifico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProtocoloResponse</returns>
-    ProtocoloResponse ProtocoloIdGet (string AccessToken, string ClientId, long? Id);
+    ProtocoloResponse ProtocoloIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Dados sobre um protocolo especifico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProtocoloResponse</returns>
-    Task<ProtocoloResponse> ProtocoloIdGetAsync (string AccessToken, string ClientId, long? Id);
+    Task<ProtocoloResponse> ProtocoloIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters);
     
   }
 
@@ -94,13 +94,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre protocolo O recurso de protocolo existe para fornecer informaÃ§Ãµes sobre protocolos gerados pela prefeitura.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProtocoloResponse></returns>
-    public List<ProtocoloResponse> ProtocoloGet (string AccessToken, string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso) {
+    public List<ProtocoloResponse> ProtocoloGet (string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling ProtocoloGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling ProtocoloGet");
@@ -128,8 +125,9 @@ namespace ima.Api.V1 {
        if (CodigoBairro != null) queryParams.Add("codigoBairro", apiClient.ParameterToString(CodigoBairro)); // query parameter
        if (SiglaExpediente != null) queryParams.Add("siglaExpediente", apiClient.ParameterToString(SiglaExpediente)); // query parameter
        if (AnoProcesso != null) queryParams.Add("anoProcesso", apiClient.ParameterToString(AnoProcesso)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -150,13 +148,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Dados sobre protocolo O recurso de protocolo existe para fornecer informaÃ§Ãµes sobre protocolos gerados pela prefeitura.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="NomeRegiao">Filtra resultados por Ã¡rea regional. (Exemplo &gt; &#39;NORTE&#39;)</param>/// <param name="CodigoBairro">Filtra resultados por cÃ³digo do bairro.</param>/// <param name="SiglaExpediente">Filtra resultados pelo cÃ³digo da secretaria expediente.</param>/// <param name="AnoProcesso">Filtra resultados pelo ano em que foram lanÃ§ados.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProtocoloResponse></returns>
-    public async Task<List<ProtocoloResponse>> ProtocoloGetAsync (string AccessToken, string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso) {
+    public async Task<List<ProtocoloResponse>> ProtocoloGetAsync (string ClientId, string Offset, string Limit, string NomeRegiao, int? CodigoBairro, string SiglaExpediente, int? AnoProcesso, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling ProtocoloGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling ProtocoloGet");
@@ -184,8 +179,9 @@ namespace ima.Api.V1 {
        if (CodigoBairro != null) queryParams.Add("codigoBairro", apiClient.ParameterToString(CodigoBairro)); // query parameter
        if (SiglaExpediente != null) queryParams.Add("siglaExpediente", apiClient.ParameterToString(SiglaExpediente)); // query parameter
        if (AnoProcesso != null) queryParams.Add("anoProcesso", apiClient.ParameterToString(AnoProcesso)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -205,13 +201,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre um protocolo especifico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProtocoloResponse</returns>
-    public ProtocoloResponse ProtocoloIdGet (string AccessToken, string ClientId, long? Id) {
+    public ProtocoloResponse ProtocoloIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling ProtocoloIdGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling ProtocoloIdGet");
@@ -231,8 +224,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -253,13 +247,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Dados sobre um protocolo especifico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProtocoloResponse</returns>
-    public async Task<ProtocoloResponse> ProtocoloIdGetAsync (string AccessToken, string ClientId, long? Id) {
+    public async Task<ProtocoloResponse> ProtocoloIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling ProtocoloIdGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling ProtocoloIdGet");
@@ -279,8 +270,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       

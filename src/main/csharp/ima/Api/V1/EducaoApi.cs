@@ -13,30 +13,30 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre educaÃ§Ã£o O recurso de educaÃ§Ã£o retorna dados sobre instituiÃ§Ãµes educacionais na \nÃ¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EducacaoResponse></returns>
-    List<EducacaoResponse> EducacaoGet (string AccessToken, string ClientId, string Offset, string Limit);
+    List<EducacaoResponse> EducacaoGet (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Dados sobre educaÃ§Ã£o O recurso de educaÃ§Ã£o retorna dados sobre instituiÃ§Ãµes educacionais na \nÃ¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EducacaoResponse></returns>
-    Task<List<EducacaoResponse>> EducacaoGetAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<EducacaoResponse>> EducacaoGetAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Retorna um dado sobre educaÃ§Ã£o especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EducacaoResponse</returns>
-    EducacaoResponse EducacaoIdGet (string AccessToken, string ClientId, long? Id);
+    EducacaoResponse EducacaoIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Retorna um dado sobre educaÃ§Ã£o especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EducacaoResponse</returns>
-    Task<EducacaoResponse> EducacaoIdGetAsync (string AccessToken, string ClientId, long? Id);
+    Task<EducacaoResponse> EducacaoIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters);
     
   }
 
@@ -94,13 +94,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre educaÃ§Ã£o O recurso de educaÃ§Ã£o retorna dados sobre instituiÃ§Ãµes educacionais na \nÃ¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EducacaoResponse></returns>
-    public List<EducacaoResponse> EducacaoGet (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<EducacaoResponse> EducacaoGet (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling EducacaoGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling EducacaoGet");
@@ -124,8 +121,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -146,13 +144,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Dados sobre educaÃ§Ã£o O recurso de educaÃ§Ã£o retorna dados sobre instituiÃ§Ãµes educacionais na \nÃ¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EducacaoResponse></returns>
-    public async Task<List<EducacaoResponse>> EducacaoGetAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<EducacaoResponse>> EducacaoGetAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling EducacaoGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling EducacaoGet");
@@ -176,8 +171,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -197,13 +193,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Retorna um dado sobre educaÃ§Ã£o especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EducacaoResponse</returns>
-    public EducacaoResponse EducacaoIdGet (string AccessToken, string ClientId, long? Id) {
+    public EducacaoResponse EducacaoIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling EducacaoIdGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling EducacaoIdGet");
@@ -223,8 +216,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -245,13 +239,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Retorna um dado sobre educaÃ§Ã£o especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do registro.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EducacaoResponse</returns>
-    public async Task<EducacaoResponse> EducacaoIdGetAsync (string AccessToken, string ClientId, long? Id) {
+    public async Task<EducacaoResponse> EducacaoIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling EducacaoIdGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling EducacaoIdGet");
@@ -271,8 +262,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       

@@ -13,30 +13,30 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre sÃ¡ude O recurso sÃ¡ude tem a funÃ§Ã£o de mostrar os dados sobre atendimentos hospitalares realizados em hospitais da Ã¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SaudeResponse></returns>
-    List<SaudeResponse> SaudeGet (string AccessToken, string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento);
+    List<SaudeResponse> SaudeGet (string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Dados sobre sÃ¡ude O recurso sÃ¡ude tem a funÃ§Ã£o de mostrar os dados sobre atendimentos hospitalares realizados em hospitais da Ã¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SaudeResponse></returns>
-    Task<List<SaudeResponse>> SaudeGetAsync (string AccessToken, string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento);
+    Task<List<SaudeResponse>> SaudeGetAsync (string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Retorna um dado hospitalar especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SaudeResponse</returns>
-    SaudeResponse SaudeIdGet (string AccessToken, string ClientId, long? Id);
+    SaudeResponse SaudeIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Retorna um dado hospitalar especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SaudeResponse</returns>
-    Task<SaudeResponse> SaudeIdGetAsync (string AccessToken, string ClientId, long? Id);
+    Task<SaudeResponse> SaudeIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters);
     
   }
 
@@ -94,13 +94,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Dados sobre sÃ¡ude O recurso sÃ¡ude tem a funÃ§Ã£o de mostrar os dados sobre atendimentos hospitalares realizados em hospitais da Ã¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SaudeResponse></returns>
-    public List<SaudeResponse> SaudeGet (string AccessToken, string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento) {
+    public List<SaudeResponse> SaudeGet (string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling SaudeGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling SaudeGet");
@@ -129,8 +126,9 @@ namespace ima.Api.V1 {
        if (CodigoProcedimentoSUS != null) queryParams.Add("codigoProcedimentoSUS", apiClient.ParameterToString(CodigoProcedimentoSUS)); // query parameter
        if (CodigoAtividadeProfissional != null) queryParams.Add("codigoAtividadeProfissional", apiClient.ParameterToString(CodigoAtividadeProfissional)); // query parameter
        if (DistritoAtendimento != null) queryParams.Add("distritoAtendimento", apiClient.ParameterToString(DistritoAtendimento)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -151,13 +149,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Dados sobre sÃ¡ude O recurso sÃ¡ude tem a funÃ§Ã£o de mostrar os dados sobre atendimentos hospitalares realizados em hospitais da Ã¡rea de Campinas.\n
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Uf">Filtra resultados por UF.</param>/// <param name="Municipio">Filtra resultados por cidade.</param>/// <param name="CodigoProcedimentoSUS">Filtra resultados por cÃ³digo de procedimento.</param>/// <param name="CodigoAtividadeProfissional">Filtra resultados pelo cÃ³digo do profissional.</param>/// <param name="DistritoAtendimento">Filtra resultados por distrito de atendimento.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SaudeResponse></returns>
-    public async Task<List<SaudeResponse>> SaudeGetAsync (string AccessToken, string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento) {
+    public async Task<List<SaudeResponse>> SaudeGetAsync (string ClientId, string Offset, string Limit, string Uf, string Municipio, long? CodigoProcedimentoSUS, int? CodigoAtividadeProfissional, string DistritoAtendimento, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling SaudeGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling SaudeGet");
@@ -186,8 +181,9 @@ namespace ima.Api.V1 {
        if (CodigoProcedimentoSUS != null) queryParams.Add("codigoProcedimentoSUS", apiClient.ParameterToString(CodigoProcedimentoSUS)); // query parameter
        if (CodigoAtividadeProfissional != null) queryParams.Add("codigoAtividadeProfissional", apiClient.ParameterToString(CodigoAtividadeProfissional)); // query parameter
        if (DistritoAtendimento != null) queryParams.Add("distritoAtendimento", apiClient.ParameterToString(DistritoAtendimento)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -207,13 +203,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Retorna um dado hospitalar especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SaudeResponse</returns>
-    public SaudeResponse SaudeIdGet (string AccessToken, string ClientId, long? Id) {
+    public SaudeResponse SaudeIdGet (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling SaudeIdGet");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling SaudeIdGet");
@@ -233,8 +226,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -255,13 +249,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Retorna um dado hospitalar especÃ­fico. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Id">Identificador do protocolo.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SaudeResponse</returns>
-    public async Task<SaudeResponse> SaudeIdGetAsync (string AccessToken, string ClientId, long? Id) {
+    public async Task<SaudeResponse> SaudeIdGetAsync (string ClientId, long? Id, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling SaudeIdGet");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling SaudeIdGet");
@@ -281,8 +272,9 @@ namespace ima.Api.V1 {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       

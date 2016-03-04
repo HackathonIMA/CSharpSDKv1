@@ -13,6 +13,11 @@ namespace ima.Api.V1.Model {
   [DataContract]
   public class SubItensContasResponse {
     
+    
+    [DataMember(Name="links", EmitDefaultValue=false)]
+    public List<LinksModel> Links { get; set; }
+
+    
     /* Identificador do registro. */
     [DataMember(Name="ID", EmitDefaultValue=false)]
     public string ID { get; set; }
@@ -31,6 +36,8 @@ namespace ima.Api.V1.Model {
     public override string ToString()  {
       var sb = new StringBuilder();
       sb.Append("class SubItensContasResponse {\n");
+      
+      sb.Append("  Links: ").Append(Links).Append("\n");
       
       sb.Append("  ID: ").Append(ID).Append("\n");
       

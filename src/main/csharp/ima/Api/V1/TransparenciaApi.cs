@@ -13,478 +13,478 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das aÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<AcoesResponse></returns>
-    List<AcoesResponse> QueryfiltroAcao (string AccessToken, string ClientId, string Offset, string Limit);
+    List<AcoesResponse> QueryfiltroAcao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das aÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<AcoesResponse></returns>
-    Task<List<AcoesResponse>> QueryfiltroAcaoAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<AcoesResponse>> QueryfiltroAcaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da aÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>AcoesResponse</returns>
-    AcoesResponse QueryfiltroAcao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    AcoesResponse QueryfiltroAcao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da aÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>AcoesResponse</returns>
-    Task<AcoesResponse> QueryfiltroAcao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<AcoesResponse> QueryfiltroAcao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de credores. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<CredorResponse></returns>
-    List<CredorResponse> PtrLkpCredor (string AccessToken, string ClientId, string Offset, string Limit);
+    List<CredorResponse> PtrLkpCredor (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de credores. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<CredorResponse></returns>
-    Task<List<CredorResponse>> PtrLkpCredorAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<CredorResponse>> PtrLkpCredorAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de credor. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>CredorResponse</returns>
-    CredorResponse PtrLkpCredor2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    CredorResponse PtrLkpCredor2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de credor. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>CredorResponse</returns>
-    Task<CredorResponse> PtrLkpCredor2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<CredorResponse> PtrLkpCredor2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de despesas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
     /// <returns>List<DespesasResponse></returns>
-    List<DespesasResponse> PtrFtDespesa (string AccessToken, string ClientId, string Offset, string Limit, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand);
+    List<DespesasResponse> PtrFtDespesa (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand);
 
     /// <summary>
     /// Consulta de despesas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
     /// <returns>List<DespesasResponse></returns>
-    Task<List<DespesasResponse>> PtrFtDespesaAsync (string AccessToken, string ClientId, string Offset, string Limit, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand);
+    Task<List<DespesasResponse>> PtrFtDespesaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand);
     
     /// <summary>
     /// Consulta de uma despesa da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>DespesasResponse</returns>
-    DespesasResponse PtrFtDespesa2 (string Id, string AccessToken, string ClientId, string Expand);
+    DespesasResponse PtrFtDespesa2 (string Id, string ClientId, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de uma despesa da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>DespesasResponse</returns>
-    Task<DespesasResponse> PtrFtDespesa2Async (string Id, string AccessToken, string ClientId, string Expand);
+    Task<DespesasResponse> PtrFtDespesa2Async (string Id, string ClientId, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ElementoDespesaResponse></returns>
-    List<ElementoDespesaResponse> PtrLkpElementoDespesa (string AccessToken, string ClientId, string Offset, string Limit);
+    List<ElementoDespesaResponse> PtrLkpElementoDespesa (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ElementoDespesaResponse></returns>
-    Task<List<ElementoDespesaResponse>> PtrLkpElementoDespesaAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<ElementoDespesaResponse>> PtrLkpElementoDespesaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ElementoDespesaResponse</returns>
-    ElementoDespesaResponse PtrLkpElementoDespesa2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    ElementoDespesaResponse PtrLkpElementoDespesa2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ElementoDespesaResponse</returns>
-    Task<ElementoDespesaResponse> PtrLkpElementoDespesa2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<ElementoDespesaResponse> PtrLkpElementoDespesa2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EmpenhoResponse></returns>
-    List<EmpenhoResponse> PtrLkpNe (string AccessToken, string ClientId, string Offset, string Limit);
+    List<EmpenhoResponse> PtrLkpNe (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EmpenhoResponse></returns>
-    Task<List<EmpenhoResponse>> PtrLkpNeAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<EmpenhoResponse>> PtrLkpNeAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EmpenhoResponse</returns>
-    EmpenhoResponse PtrLkpNe2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    EmpenhoResponse PtrLkpNe2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EmpenhoResponse</returns>
-    Task<EmpenhoResponse> PtrLkpNe2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<EmpenhoResponse> PtrLkpNe2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de contas das fontes da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FontesResponse></returns>
-    List<FontesResponse> PtrLkpFonteDetalhada (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    List<FontesResponse> PtrLkpFonteDetalhada (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de contas das fontes da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FontesResponse></returns>
-    Task<List<FontesResponse>> PtrLkpFonteDetalhadaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<List<FontesResponse>> PtrLkpFonteDetalhadaAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de conta da fonte da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FontesResponse</returns>
-    FontesResponse PtrLkpFonteDetalhada2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    FontesResponse PtrLkpFonteDetalhada2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de conta da fonte da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FontesResponse</returns>
-    Task<FontesResponse> PtrLkpFonteDetalhada2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<FontesResponse> PtrLkpFonteDetalhada2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das receitas das fontes detalhadas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FonteDetalhadaResponse></returns>
-    List<FonteDetalhadaResponse> PtrLkpFonte (string AccessToken, string ClientId, string Offset, string Limit);
+    List<FonteDetalhadaResponse> PtrLkpFonte (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das receitas das fontes detalhadas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FonteDetalhadaResponse></returns>
-    Task<List<FonteDetalhadaResponse>> PtrLkpFonteAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<FonteDetalhadaResponse>> PtrLkpFonteAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da receita da fonte detalhada da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FonteDetalhadaResponse</returns>
-    FonteDetalhadaResponse PtrLkpFonte2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    FonteDetalhadaResponse PtrLkpFonte2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da receita da fonte detalhada da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FonteDetalhadaResponse</returns>
-    Task<FonteDetalhadaResponse> PtrLkpFonte2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<FonteDetalhadaResponse> PtrLkpFonte2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FuncoesResponse></returns>
-    List<FuncoesResponse> PtrLkpFuncao (string AccessToken, string ClientId, string Offset, string Limit);
+    List<FuncoesResponse> PtrLkpFuncao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FuncoesResponse></returns>
-    Task<List<FuncoesResponse>> PtrLkpFuncaoAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<FuncoesResponse>> PtrLkpFuncaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FuncoesResponse</returns>
-    FuncoesResponse PtrLkpFuncao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    FuncoesResponse PtrLkpFuncao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FuncoesResponse</returns>
-    Task<FuncoesResponse> PtrLkpFuncao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<FuncoesResponse> PtrLkpFuncao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de contas das naturezas das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<NaturezasResponse></returns>
-    List<NaturezasResponse> PtrLkpSubalineaReceita (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    List<NaturezasResponse> PtrLkpSubalineaReceita (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de contas das naturezas das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<NaturezasResponse></returns>
-    Task<List<NaturezasResponse>> PtrLkpSubalineaReceitaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<List<NaturezasResponse>> PtrLkpSubalineaReceitaAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de conta da natureza da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>NaturezasResponse</returns>
-    NaturezasResponse PtrLkpSubalineaReceita2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    NaturezasResponse PtrLkpSubalineaReceita2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de conta da natureza da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>NaturezasResponse</returns>
-    Task<NaturezasResponse> PtrLkpSubalineaReceita2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<NaturezasResponse> PtrLkpSubalineaReceita2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta dos programas da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProgramaResponse></returns>
-    List<ProgramaResponse> PtrLkpPrograma (string AccessToken, string ClientId, string Offset, string Limit);
+    List<ProgramaResponse> PtrLkpPrograma (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta dos programas da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProgramaResponse></returns>
-    Task<List<ProgramaResponse>> PtrLkpProgramaAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<ProgramaResponse>> PtrLkpProgramaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta do programa da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProgramaResponse</returns>
-    ProgramaResponse PtrLkpPrograma2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    ProgramaResponse PtrLkpPrograma2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta do programa da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProgramaResponse</returns>
-    Task<ProgramaResponse> PtrLkpPrograma2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<ProgramaResponse> PtrLkpPrograma2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta dos projetos e atividades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProjetoAtividadeResponse></returns>
-    List<ProjetoAtividadeResponse> PtrLkpProjetoAtividade (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    List<ProjetoAtividadeResponse> PtrLkpProjetoAtividade (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta dos projetos e atividades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProjetoAtividadeResponse></returns>
-    Task<List<ProjetoAtividadeResponse>> PtrLkpProjetoAtividadeAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<List<ProjetoAtividadeResponse>> PtrLkpProjetoAtividadeAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta do projeto e atividade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProjetoAtividadeResponse</returns>
-    ProjetoAtividadeResponse PtrLkpProjetoAtividade2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    ProjetoAtividadeResponse PtrLkpProjetoAtividade2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta do projeto e atividade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProjetoAtividadeResponse</returns>
-    Task<ProjetoAtividadeResponse> PtrLkpProjetoAtividade2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<ProjetoAtividadeResponse> PtrLkpProjetoAtividade2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>List<ReceitaResponse></returns>
-    List<ReceitaResponse> PtrFtReceita (string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza);
+    List<ReceitaResponse> PtrFtReceita (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza);
 
     /// <summary>
     /// Consulta das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>List<ReceitaResponse></returns>
-    Task<List<ReceitaResponse>> PtrFtReceitaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza);
+    Task<List<ReceitaResponse>> PtrFtReceitaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza);
     
     /// <summary>
     /// Consulta da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>ReceitaResponse</returns>
-    ReceitaResponse PtrFtReceita2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza);
+    ReceitaResponse PtrFtReceita2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza);
 
     /// <summary>
     /// Consulta da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>ReceitaResponse</returns>
-    Task<ReceitaResponse> PtrFtReceita2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza);
+    Task<ReceitaResponse> PtrFtReceita2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza);
     
     /// <summary>
     /// Consulta dos sub-itens das contas. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubItensContasResponse></returns>
-    List<SubItensContasResponse> PtrLkpSubitemConta (string AccessToken, string ClientId, string Offset, string Limit);
+    List<SubItensContasResponse> PtrLkpSubitemConta (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta dos sub-itens das contas. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubItensContasResponse></returns>
-    Task<List<SubItensContasResponse>> PtrLkpSubitemContaAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<SubItensContasResponse>> PtrLkpSubitemContaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta do sub-item das contas. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubItensContasResponse</returns>
-    SubItensContasResponse PtrLkpSubitemConta2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    SubItensContasResponse PtrLkpSubitemConta2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta do sub-item das contas. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubItensContasResponse</returns>
-    Task<SubItensContasResponse> PtrLkpSubitemConta2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<SubItensContasResponse> PtrLkpSubitemConta2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das sub-funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubfuncoesResponse></returns>
-    List<SubfuncoesResponse> PtrLkpSubfuncao (string AccessToken, string ClientId, string Offset, string Limit);
+    List<SubfuncoesResponse> PtrLkpSubfuncao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das sub-funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubfuncoesResponse></returns>
-    Task<List<SubfuncoesResponse>> PtrLkpSubfuncaoAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<SubfuncoesResponse>> PtrLkpSubfuncaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da sub-funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubfuncoesResponse</returns>
-    SubfuncoesResponse PtrLkpSubfuncao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    SubfuncoesResponse PtrLkpSubfuncao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da sub-funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubfuncoesResponse</returns>
-    Task<SubfuncoesResponse> PtrLkpSubfuncao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<SubfuncoesResponse> PtrLkpSubfuncao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta dos tipos de licitaÃ§Ãµes. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<TipoLicitacoesResponse></returns>
-    List<TipoLicitacoesResponse> PtrLkpTipoLicitacao (string AccessToken, string ClientId, string Offset, string Limit);
+    List<TipoLicitacoesResponse> PtrLkpTipoLicitacao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta dos tipos de licitaÃ§Ãµes. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<TipoLicitacoesResponse></returns>
-    Task<List<TipoLicitacoesResponse>> PtrLkpTipoLicitacaoAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<TipoLicitacoesResponse>> PtrLkpTipoLicitacaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta do tipo de licitaÃ§Ã£o. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>TipoLicitacoesResponse</returns>
-    TipoLicitacoesResponse PtrLkpTipoLicitacao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    TipoLicitacoesResponse PtrLkpTipoLicitacao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta do tipo de licitaÃ§Ã£o. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>TipoLicitacoesResponse</returns>
-    Task<TipoLicitacoesResponse> PtrLkpTipoLicitacao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<TipoLicitacoesResponse> PtrLkpTipoLicitacao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta das unidades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadesResponse></returns>
-    List<UnidadesResponse> PtrLkpUnidadeOrcamentaria (string AccessToken, string ClientId, string Offset, string Limit);
+    List<UnidadesResponse> PtrLkpUnidadeOrcamentaria (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta das unidades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadesResponse></returns>
-    Task<List<UnidadesResponse>> PtrLkpUnidadeOrcamentariaAsync (string AccessToken, string ClientId, string Offset, string Limit);
+    Task<List<UnidadesResponse>> PtrLkpUnidadeOrcamentariaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta da unidade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadesResponse</returns>
-    UnidadesResponse PtrLkpUnidadeOrcamentaria2 (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    UnidadesResponse PtrLkpUnidadeOrcamentaria2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta da unidade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadesResponse</returns>
-    Task<UnidadesResponse> PtrLkpUnidadeOrcamentaria2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit);
+    Task<UnidadesResponse> PtrLkpUnidadeOrcamentaria2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de contas das unidades gestoras da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadeGestoraResponse></returns>
-    List<UnidadeGestoraResponse> PtrLkpUnidadeGestora (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    List<UnidadeGestoraResponse> PtrLkpUnidadeGestora (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de contas das unidades gestoras da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadeGestoraResponse></returns>
-    Task<List<UnidadeGestoraResponse>> PtrLkpUnidadeGestoraAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<List<UnidadeGestoraResponse>> PtrLkpUnidadeGestoraAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
     /// <summary>
     /// Consulta de conta da unidade gestora da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadeGestoraResponse</returns>
-    UnidadeGestoraResponse PtrLkpUnidadeGestora2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    UnidadeGestoraResponse PtrLkpUnidadeGestora2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
 
     /// <summary>
     /// Consulta de conta da unidade gestora da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadeGestoraResponse</returns>
-    Task<UnidadeGestoraResponse> PtrLkpUnidadeGestora2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand);
+    Task<UnidadeGestoraResponse> PtrLkpUnidadeGestora2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters);
     
   }
 
@@ -542,13 +542,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das aÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<AcoesResponse></returns>
-    public List<AcoesResponse> QueryfiltroAcao (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<AcoesResponse> QueryfiltroAcao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling QueryfiltroAcao");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling QueryfiltroAcao");
@@ -572,8 +569,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -594,13 +592,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das aÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<AcoesResponse></returns>
-    public async Task<List<AcoesResponse>> QueryfiltroAcaoAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<AcoesResponse>> QueryfiltroAcaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling QueryfiltroAcao");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling QueryfiltroAcao");
@@ -624,8 +619,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -645,16 +641,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da aÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>AcoesResponse</returns>
-    public AcoesResponse QueryfiltroAcao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public AcoesResponse QueryfiltroAcao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling QueryfiltroAcao2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling QueryfiltroAcao2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling QueryfiltroAcao2");
@@ -679,8 +672,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -701,16 +695,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da aÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>AcoesResponse</returns>
-    public async Task<AcoesResponse> QueryfiltroAcao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<AcoesResponse> QueryfiltroAcao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling QueryfiltroAcao2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling QueryfiltroAcao2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling QueryfiltroAcao2");
@@ -735,8 +726,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -756,13 +748,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de credores. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<CredorResponse></returns>
-    public List<CredorResponse> PtrLkpCredor (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<CredorResponse> PtrLkpCredor (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpCredor");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpCredor");
@@ -786,8 +775,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -808,13 +798,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de credores. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<CredorResponse></returns>
-    public async Task<List<CredorResponse>> PtrLkpCredorAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<CredorResponse>> PtrLkpCredorAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpCredor");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpCredor");
@@ -838,8 +825,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -859,16 +847,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de credor. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>CredorResponse</returns>
-    public CredorResponse PtrLkpCredor2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public CredorResponse PtrLkpCredor2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpCredor2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpCredor2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpCredor2");
@@ -893,8 +878,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -915,16 +901,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de credor. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>CredorResponse</returns>
-    public async Task<CredorResponse> PtrLkpCredor2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<CredorResponse> PtrLkpCredor2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpCredor2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpCredor2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpCredor2");
@@ -949,8 +932,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -970,13 +954,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de despesas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
     /// <returns>List<DespesasResponse></returns>
-    public List<DespesasResponse> PtrFtDespesa (string AccessToken, string ClientId, string Offset, string Limit, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand) {
+    public List<DespesasResponse> PtrFtDespesa (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtDespesa");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtDespesa");
@@ -1000,6 +981,8 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (AnoExercicio != null) queryParams.Add("anoExercicio", apiClient.ParameterToString(AnoExercicio)); // query parameter
        if (Acao != null) queryParams.Add("acao", apiClient.ParameterToString(Acao)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
@@ -1012,7 +995,6 @@ namespace ima.Api.V1 {
        if (NaturezaDespesa != null) queryParams.Add("naturezaDespesa", apiClient.ParameterToString(NaturezaDespesa)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1033,13 +1015,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de despesas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="AnoExercicio">Ano de exercÃ­cio</param>/// <param name="Acao">AÃ§Ã£o, lista disponÃ­vel em GET /transparencia/acoes</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Orgao">OrgÃ£os, lista disponÃ­vel em GET /transparencia/unidadesGestoras</param>/// <param name="Funcao">FunÃ§Ã£o, lista disponÃ­vel em GET /transparencia/funcoes</param>/// <param name="Subfuncao">Sub-funÃ§Ã£o, lista disponÃ­vel em GET /transparencia/subfuncoes</param>/// <param name="Programa">Programa, lista disponÃ­vel em GET /transparencia/programas</param>/// <param name="OrigemFonte">Origem das fontes, lista disponÃ­vel em GET /transparencia/fontesDetalhadas</param>/// <param name="Fonte">Fontes, lista disponÃ­vel em GET /transparencia/fontes</param>/// <param name="NaturezaDespesa">Natureza da despesa, lista disponÃ­vel em GET /transparencia/subItensContas</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
     /// <returns>List<DespesasResponse></returns>
-    public async Task<List<DespesasResponse>> PtrFtDespesaAsync (string AccessToken, string ClientId, string Offset, string Limit, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand) {
+    public async Task<List<DespesasResponse>> PtrFtDespesaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string AnoExercicio, string Acao, string Mes, string Orgao, string Funcao, string Subfuncao, string Programa, string OrigemFonte, string Fonte, string NaturezaDespesa, string Expand) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtDespesa");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtDespesa");
@@ -1063,6 +1042,8 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (AnoExercicio != null) queryParams.Add("anoExercicio", apiClient.ParameterToString(AnoExercicio)); // query parameter
        if (Acao != null) queryParams.Add("acao", apiClient.ParameterToString(Acao)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
@@ -1075,7 +1056,6 @@ namespace ima.Api.V1 {
        if (NaturezaDespesa != null) queryParams.Add("naturezaDespesa", apiClient.ParameterToString(NaturezaDespesa)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1095,16 +1075,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de uma despesa da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>DespesasResponse</returns>
-    public DespesasResponse PtrFtDespesa2 (string Id, string AccessToken, string ClientId, string Expand) {
+    public DespesasResponse PtrFtDespesa2 (string Id, string ClientId, string Expand, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrFtDespesa2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtDespesa2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtDespesa2");
@@ -1122,8 +1099,9 @@ namespace ima.Api.V1 {
       String postBody = null;
 
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1144,16 +1122,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de uma despesa da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>DespesasResponse</returns>
-    public async Task<DespesasResponse> PtrFtDespesa2Async (string Id, string AccessToken, string ClientId, string Expand) {
+    public async Task<DespesasResponse> PtrFtDespesa2Async (string Id, string ClientId, string Expand, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrFtDespesa2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtDespesa2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtDespesa2");
@@ -1171,8 +1146,9 @@ namespace ima.Api.V1 {
       String postBody = null;
 
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1192,13 +1168,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ElementoDespesaResponse></returns>
-    public List<ElementoDespesaResponse> PtrLkpElementoDespesa (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<ElementoDespesaResponse> PtrLkpElementoDespesa (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpElementoDespesa");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpElementoDespesa");
@@ -1222,8 +1195,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1244,13 +1218,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ElementoDespesaResponse></returns>
-    public async Task<List<ElementoDespesaResponse>> PtrLkpElementoDespesaAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<ElementoDespesaResponse>> PtrLkpElementoDespesaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpElementoDespesa");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpElementoDespesa");
@@ -1274,8 +1245,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1295,16 +1267,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ElementoDespesaResponse</returns>
-    public ElementoDespesaResponse PtrLkpElementoDespesa2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public ElementoDespesaResponse PtrLkpElementoDespesa2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpElementoDespesa2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpElementoDespesa2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpElementoDespesa2");
@@ -1329,8 +1298,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1351,16 +1321,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ElementoDespesaResponse</returns>
-    public async Task<ElementoDespesaResponse> PtrLkpElementoDespesa2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<ElementoDespesaResponse> PtrLkpElementoDespesa2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpElementoDespesa2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpElementoDespesa2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpElementoDespesa2");
@@ -1385,8 +1352,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1406,13 +1374,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EmpenhoResponse></returns>
-    public List<EmpenhoResponse> PtrLkpNe (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<EmpenhoResponse> PtrLkpNe (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpNe");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpNe");
@@ -1436,8 +1401,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1458,13 +1424,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das despesas dos elementos da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<EmpenhoResponse></returns>
-    public async Task<List<EmpenhoResponse>> PtrLkpNeAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<EmpenhoResponse>> PtrLkpNeAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpNe");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpNe");
@@ -1488,8 +1451,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1509,16 +1473,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EmpenhoResponse</returns>
-    public EmpenhoResponse PtrLkpNe2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public EmpenhoResponse PtrLkpNe2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpNe2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpNe2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpNe2");
@@ -1543,8 +1504,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1565,16 +1527,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da despesa do elemento da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>EmpenhoResponse</returns>
-    public async Task<EmpenhoResponse> PtrLkpNe2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<EmpenhoResponse> PtrLkpNe2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpNe2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpNe2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpNe2");
@@ -1599,8 +1558,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1620,13 +1580,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de contas das fontes da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FontesResponse></returns>
-    public List<FontesResponse> PtrLkpFonteDetalhada (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public List<FontesResponse> PtrLkpFonteDetalhada (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonteDetalhada");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonteDetalhada");
@@ -1651,8 +1608,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1673,13 +1631,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de contas das fontes da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FontesResponse></returns>
-    public async Task<List<FontesResponse>> PtrLkpFonteDetalhadaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<List<FontesResponse>> PtrLkpFonteDetalhadaAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonteDetalhada");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonteDetalhada");
@@ -1704,8 +1659,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1725,16 +1681,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de conta da fonte da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FontesResponse</returns>
-    public FontesResponse PtrLkpFonteDetalhada2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public FontesResponse PtrLkpFonteDetalhada2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFonteDetalhada2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonteDetalhada2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonteDetalhada2");
@@ -1760,8 +1713,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1782,16 +1736,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de conta da fonte da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FontesResponse</returns>
-    public async Task<FontesResponse> PtrLkpFonteDetalhada2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<FontesResponse> PtrLkpFonteDetalhada2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFonteDetalhada2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonteDetalhada2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonteDetalhada2");
@@ -1817,8 +1768,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1838,13 +1790,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das receitas das fontes detalhadas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FonteDetalhadaResponse></returns>
-    public List<FonteDetalhadaResponse> PtrLkpFonte (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<FonteDetalhadaResponse> PtrLkpFonte (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonte");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonte");
@@ -1868,8 +1817,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1890,13 +1840,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das receitas das fontes detalhadas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FonteDetalhadaResponse></returns>
-    public async Task<List<FonteDetalhadaResponse>> PtrLkpFonteAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<FonteDetalhadaResponse>> PtrLkpFonteAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonte");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonte");
@@ -1920,8 +1867,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1941,16 +1889,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da receita da fonte detalhada da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FonteDetalhadaResponse</returns>
-    public FonteDetalhadaResponse PtrLkpFonte2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public FonteDetalhadaResponse PtrLkpFonte2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFonte2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonte2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonte2");
@@ -1975,8 +1920,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -1997,16 +1943,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da receita da fonte detalhada da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FonteDetalhadaResponse</returns>
-    public async Task<FonteDetalhadaResponse> PtrLkpFonte2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<FonteDetalhadaResponse> PtrLkpFonte2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFonte2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFonte2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFonte2");
@@ -2031,8 +1974,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2052,13 +1996,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FuncoesResponse></returns>
-    public List<FuncoesResponse> PtrLkpFuncao (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<FuncoesResponse> PtrLkpFuncao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFuncao");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFuncao");
@@ -2082,8 +2023,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2104,13 +2046,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<FuncoesResponse></returns>
-    public async Task<List<FuncoesResponse>> PtrLkpFuncaoAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<FuncoesResponse>> PtrLkpFuncaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFuncao");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFuncao");
@@ -2134,8 +2073,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2155,16 +2095,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FuncoesResponse</returns>
-    public FuncoesResponse PtrLkpFuncao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public FuncoesResponse PtrLkpFuncao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFuncao2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFuncao2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFuncao2");
@@ -2189,8 +2126,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2211,16 +2149,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>FuncoesResponse</returns>
-    public async Task<FuncoesResponse> PtrLkpFuncao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<FuncoesResponse> PtrLkpFuncao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpFuncao2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpFuncao2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpFuncao2");
@@ -2245,8 +2180,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2266,13 +2202,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de contas das naturezas das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<NaturezasResponse></returns>
-    public List<NaturezasResponse> PtrLkpSubalineaReceita (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public List<NaturezasResponse> PtrLkpSubalineaReceita (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubalineaReceita");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubalineaReceita");
@@ -2297,8 +2230,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2319,13 +2253,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de contas das naturezas das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<NaturezasResponse></returns>
-    public async Task<List<NaturezasResponse>> PtrLkpSubalineaReceitaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<List<NaturezasResponse>> PtrLkpSubalineaReceitaAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubalineaReceita");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubalineaReceita");
@@ -2350,8 +2281,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2371,16 +2303,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de conta da natureza da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>NaturezasResponse</returns>
-    public NaturezasResponse PtrLkpSubalineaReceita2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public NaturezasResponse PtrLkpSubalineaReceita2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubalineaReceita2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubalineaReceita2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubalineaReceita2");
@@ -2406,8 +2335,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2428,16 +2358,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de conta da natureza da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>NaturezasResponse</returns>
-    public async Task<NaturezasResponse> PtrLkpSubalineaReceita2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<NaturezasResponse> PtrLkpSubalineaReceita2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubalineaReceita2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubalineaReceita2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubalineaReceita2");
@@ -2463,8 +2390,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2484,13 +2412,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta dos programas da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProgramaResponse></returns>
-    public List<ProgramaResponse> PtrLkpPrograma (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<ProgramaResponse> PtrLkpPrograma (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpPrograma");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpPrograma");
@@ -2514,8 +2439,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2536,13 +2462,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta dos programas da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProgramaResponse></returns>
-    public async Task<List<ProgramaResponse>> PtrLkpProgramaAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<ProgramaResponse>> PtrLkpProgramaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpPrograma");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpPrograma");
@@ -2566,8 +2489,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2587,16 +2511,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta do programa da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProgramaResponse</returns>
-    public ProgramaResponse PtrLkpPrograma2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public ProgramaResponse PtrLkpPrograma2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpPrograma2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpPrograma2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpPrograma2");
@@ -2621,8 +2542,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2643,16 +2565,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta do programa da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProgramaResponse</returns>
-    public async Task<ProgramaResponse> PtrLkpPrograma2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<ProgramaResponse> PtrLkpPrograma2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpPrograma2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpPrograma2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpPrograma2");
@@ -2677,8 +2596,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2698,13 +2618,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta dos projetos e atividades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProjetoAtividadeResponse></returns>
-    public List<ProjetoAtividadeResponse> PtrLkpProjetoAtividade (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public List<ProjetoAtividadeResponse> PtrLkpProjetoAtividade (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpProjetoAtividade");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpProjetoAtividade");
@@ -2729,8 +2646,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2751,13 +2669,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta dos projetos e atividades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<ProjetoAtividadeResponse></returns>
-    public async Task<List<ProjetoAtividadeResponse>> PtrLkpProjetoAtividadeAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<List<ProjetoAtividadeResponse>> PtrLkpProjetoAtividadeAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpProjetoAtividade");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpProjetoAtividade");
@@ -2782,8 +2697,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2803,16 +2719,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta do projeto e atividade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProjetoAtividadeResponse</returns>
-    public ProjetoAtividadeResponse PtrLkpProjetoAtividade2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public ProjetoAtividadeResponse PtrLkpProjetoAtividade2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpProjetoAtividade2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpProjetoAtividade2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpProjetoAtividade2");
@@ -2838,8 +2751,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2860,16 +2774,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta do projeto e atividade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>ProjetoAtividadeResponse</returns>
-    public async Task<ProjetoAtividadeResponse> PtrLkpProjetoAtividade2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<ProjetoAtividadeResponse> PtrLkpProjetoAtividade2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpProjetoAtividade2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpProjetoAtividade2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpProjetoAtividade2");
@@ -2895,8 +2806,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2916,13 +2828,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>List<ReceitaResponse></returns>
-    public List<ReceitaResponse> PtrFtReceita (string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza) {
+    public List<ReceitaResponse> PtrFtReceita (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtReceita");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtReceita");
@@ -2946,12 +2855,13 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (Ano != null) queryParams.Add("ano", apiClient.ParameterToString(Ano)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
        if (Unidade != null) queryParams.Add("unidade", apiClient.ParameterToString(Unidade)); // query parameter
        if (Natureza != null) queryParams.Add("natureza", apiClient.ParameterToString(Natureza)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -2972,13 +2882,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das receitas da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>List<ReceitaResponse></returns>
-    public async Task<List<ReceitaResponse>> PtrFtReceitaAsync (string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza) {
+    public async Task<List<ReceitaResponse>> PtrFtReceitaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtReceita");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtReceita");
@@ -3002,12 +2909,13 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (Ano != null) queryParams.Add("ano", apiClient.ParameterToString(Ano)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
        if (Unidade != null) queryParams.Add("unidade", apiClient.ParameterToString(Unidade)); // query parameter
        if (Natureza != null) queryParams.Add("natureza", apiClient.ParameterToString(Natureza)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3027,16 +2935,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>ReceitaResponse</returns>
-    public ReceitaResponse PtrFtReceita2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza) {
+    public ReceitaResponse PtrFtReceita2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrFtReceita2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtReceita2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtReceita2");
@@ -3061,12 +2966,13 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (Ano != null) queryParams.Add("ano", apiClient.ParameterToString(Ano)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
        if (Unidade != null) queryParams.Add("unidade", apiClient.ParameterToString(Unidade)); // query parameter
        if (Natureza != null) queryParams.Add("natureza", apiClient.ParameterToString(Natureza)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3087,16 +2993,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da receita da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>/// <param name="Ano">Ano de exercÃ­cio, lista disponÃ­vel em GET /transparencia/anosExercicioReceita</param>/// <param name="Mes">MÃªs desejado</param>/// <param name="Unidade">Unidades, lista disponÃ­vel em GET /transparencia/unidades</param>/// <param name="Natureza">Natureza das receitas, lista disponÃ­vel em GET /transparencia/naturezas</param>
     /// <returns>ReceitaResponse</returns>
-    public async Task<ReceitaResponse> PtrFtReceita2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Ano, string Mes, string Unidade, string Natureza) {
+    public async Task<ReceitaResponse> PtrFtReceita2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters, string Ano, string Mes, string Unidade, string Natureza) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrFtReceita2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrFtReceita2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrFtReceita2");
@@ -3121,12 +3024,13 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
        if (Ano != null) queryParams.Add("ano", apiClient.ParameterToString(Ano)); // query parameter
        if (Mes != null) queryParams.Add("mes", apiClient.ParameterToString(Mes)); // query parameter
        if (Unidade != null) queryParams.Add("unidade", apiClient.ParameterToString(Unidade)); // query parameter
        if (Natureza != null) queryParams.Add("natureza", apiClient.ParameterToString(Natureza)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3146,13 +3050,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta dos sub-itens das contas. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubItensContasResponse></returns>
-    public List<SubItensContasResponse> PtrLkpSubitemConta (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<SubItensContasResponse> PtrLkpSubitemConta (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubitemConta");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubitemConta");
@@ -3176,8 +3077,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3198,13 +3100,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta dos sub-itens das contas. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubItensContasResponse></returns>
-    public async Task<List<SubItensContasResponse>> PtrLkpSubitemContaAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<SubItensContasResponse>> PtrLkpSubitemContaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubitemConta");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubitemConta");
@@ -3228,8 +3127,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3249,16 +3149,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta do sub-item das contas. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubItensContasResponse</returns>
-    public SubItensContasResponse PtrLkpSubitemConta2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public SubItensContasResponse PtrLkpSubitemConta2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubitemConta2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubitemConta2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubitemConta2");
@@ -3283,8 +3180,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3305,16 +3203,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta do sub-item das contas. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubItensContasResponse</returns>
-    public async Task<SubItensContasResponse> PtrLkpSubitemConta2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<SubItensContasResponse> PtrLkpSubitemConta2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubitemConta2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubitemConta2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubitemConta2");
@@ -3339,8 +3234,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3360,13 +3256,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das sub-funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubfuncoesResponse></returns>
-    public List<SubfuncoesResponse> PtrLkpSubfuncao (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<SubfuncoesResponse> PtrLkpSubfuncao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubfuncao");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubfuncao");
@@ -3390,8 +3283,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3412,13 +3306,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das sub-funÃ§Ãµes da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<SubfuncoesResponse></returns>
-    public async Task<List<SubfuncoesResponse>> PtrLkpSubfuncaoAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<SubfuncoesResponse>> PtrLkpSubfuncaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubfuncao");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubfuncao");
@@ -3442,8 +3333,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3463,16 +3355,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da sub-funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubfuncoesResponse</returns>
-    public SubfuncoesResponse PtrLkpSubfuncao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public SubfuncoesResponse PtrLkpSubfuncao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubfuncao2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubfuncao2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubfuncao2");
@@ -3497,8 +3386,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3519,16 +3409,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da sub-funÃ§Ã£o da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>SubfuncoesResponse</returns>
-    public async Task<SubfuncoesResponse> PtrLkpSubfuncao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<SubfuncoesResponse> PtrLkpSubfuncao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpSubfuncao2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpSubfuncao2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpSubfuncao2");
@@ -3553,8 +3440,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3574,13 +3462,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta dos tipos de licitaÃ§Ãµes. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<TipoLicitacoesResponse></returns>
-    public List<TipoLicitacoesResponse> PtrLkpTipoLicitacao (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<TipoLicitacoesResponse> PtrLkpTipoLicitacao (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpTipoLicitacao");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpTipoLicitacao");
@@ -3604,8 +3489,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3626,13 +3512,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta dos tipos de licitaÃ§Ãµes. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<TipoLicitacoesResponse></returns>
-    public async Task<List<TipoLicitacoesResponse>> PtrLkpTipoLicitacaoAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<TipoLicitacoesResponse>> PtrLkpTipoLicitacaoAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpTipoLicitacao");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpTipoLicitacao");
@@ -3656,8 +3539,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3677,16 +3561,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta do tipo de licitaÃ§Ã£o. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>TipoLicitacoesResponse</returns>
-    public TipoLicitacoesResponse PtrLkpTipoLicitacao2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public TipoLicitacoesResponse PtrLkpTipoLicitacao2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpTipoLicitacao2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpTipoLicitacao2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpTipoLicitacao2");
@@ -3711,8 +3592,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3733,16 +3615,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta do tipo de licitaÃ§Ã£o. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>TipoLicitacoesResponse</returns>
-    public async Task<TipoLicitacoesResponse> PtrLkpTipoLicitacao2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<TipoLicitacoesResponse> PtrLkpTipoLicitacao2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpTipoLicitacao2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpTipoLicitacao2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpTipoLicitacao2");
@@ -3767,8 +3646,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3788,13 +3668,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta das unidades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadesResponse></returns>
-    public List<UnidadesResponse> PtrLkpUnidadeOrcamentaria (string AccessToken, string ClientId, string Offset, string Limit) {
+    public List<UnidadesResponse> PtrLkpUnidadeOrcamentaria (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeOrcamentaria");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeOrcamentaria");
@@ -3818,8 +3695,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3840,13 +3718,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta das unidades da preifeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadesResponse></returns>
-    public async Task<List<UnidadesResponse>> PtrLkpUnidadeOrcamentariaAsync (string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<List<UnidadesResponse>> PtrLkpUnidadeOrcamentariaAsync (string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeOrcamentaria");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeOrcamentaria");
@@ -3870,8 +3745,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3891,16 +3767,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta da unidade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadesResponse</returns>
-    public UnidadesResponse PtrLkpUnidadeOrcamentaria2 (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public UnidadesResponse PtrLkpUnidadeOrcamentaria2 (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpUnidadeOrcamentaria2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeOrcamentaria2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeOrcamentaria2");
@@ -3925,8 +3798,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -3947,16 +3821,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta da unidade da preifeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadesResponse</returns>
-    public async Task<UnidadesResponse> PtrLkpUnidadeOrcamentaria2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit) {
+    public async Task<UnidadesResponse> PtrLkpUnidadeOrcamentaria2Async (string Id, string ClientId, string Offset, string Limit, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpUnidadeOrcamentaria2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeOrcamentaria2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeOrcamentaria2");
@@ -3981,8 +3852,9 @@ namespace ima.Api.V1 {
 
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -4002,13 +3874,10 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de contas das unidades gestoras da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadeGestoraResponse></returns>
-    public List<UnidadeGestoraResponse> PtrLkpUnidadeGestora (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public List<UnidadeGestoraResponse> PtrLkpUnidadeGestora (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeGestora");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeGestora");
@@ -4033,8 +3902,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -4055,13 +3925,10 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de contas das unidades gestoras da prefeitura. 
     /// </summary>
-    /// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>List<UnidadeGestoraResponse></returns>
-    public async Task<List<UnidadeGestoraResponse>> PtrLkpUnidadeGestoraAsync (string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<List<UnidadeGestoraResponse>> PtrLkpUnidadeGestoraAsync (string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeGestora");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeGestora");
@@ -4086,8 +3953,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -4107,16 +3975,13 @@ namespace ima.Api.V1 {
     /// <summary>
     /// Consulta de conta da unidade gestora da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadeGestoraResponse</returns>
-    public UnidadeGestoraResponse PtrLkpUnidadeGestora2 (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public UnidadeGestoraResponse PtrLkpUnidadeGestora2 (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
       // verify the required parameter 'Id' is set
       if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpUnidadeGestora2");
-      
-      // verify the required parameter 'AccessToken' is set
-      if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeGestora2");
       
       // verify the required parameter 'ClientId' is set
       if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeGestora2");
@@ -4142,8 +4007,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
@@ -4164,16 +4030,13 @@ namespace ima.Api.V1 {
 	 /// <summary>
     /// Consulta de conta da unidade gestora da prefeitura. 
     /// </summary>
-    /// <param name="Id">Identificador do registro.</param>/// <param name="AccessToken">Access Token com as permissÃµes de acesso.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>
+    /// <param name="Id">Identificador do registro.</param>/// <param name="ClientId">Token disponibilizado na criaÃ§Ã£o da APP.</param>/// <param name="Offset">ParÃ¢metro utilizado para indicar a posiÃ§Ã£o do registro inicial que serÃ¡ trazido. A primeira posiÃ§Ã£o Ã© sempre zero (0).</param>/// <param name="Limit">ParÃ¢metro utilizado para indicar a quantidade de registros que deve ser trazido na consulta.</param>/// <param name="Expand">ParÃ¢metro utilizado para obter maiores detalhes sobre algum dos atributos do recurso. Podendo ser passados mÃºltiplos campos separados por vÃ­rgula</param>/// <param name="Fields">ParÃ¢metro utilizado para pesquisar campos especÃ­ficos</param>/// <param name="Filters">ParÃ¢metro utilizado para pesquisar valores de campos especÃ­ficos, por exemplo, para pesquisar um id de valor 123, passar o valor id:123</param>
     /// <returns>UnidadeGestoraResponse</returns>
-    public async Task<UnidadeGestoraResponse> PtrLkpUnidadeGestora2Async (string Id, string AccessToken, string ClientId, string Offset, string Limit, string Expand) {
+    public async Task<UnidadeGestoraResponse> PtrLkpUnidadeGestora2Async (string Id, string ClientId, string Offset, string Limit, string Expand, List<string> Fields, List<string> Filters) {
 
       
           // verify the required parameter 'Id' is set
           if (Id == null) throw new ApiException(400, "Missing required parameter 'Id' when calling PtrLkpUnidadeGestora2");
-      
-          // verify the required parameter 'AccessToken' is set
-          if (AccessToken == null) throw new ApiException(400, "Missing required parameter 'AccessToken' when calling PtrLkpUnidadeGestora2");
       
           // verify the required parameter 'ClientId' is set
           if (ClientId == null) throw new ApiException(400, "Missing required parameter 'ClientId' when calling PtrLkpUnidadeGestora2");
@@ -4199,8 +4062,9 @@ namespace ima.Api.V1 {
        if (Offset != null) queryParams.Add("offset", apiClient.ParameterToString(Offset)); // query parameter
        if (Limit != null) queryParams.Add("limit", apiClient.ParameterToString(Limit)); // query parameter
        if (Expand != null) queryParams.Add("expand", apiClient.ParameterToString(Expand)); // query parameter
+       if (Fields != null) queryParams.Add("fields", apiClient.ParameterToString(Fields)); // query parameter
+       if (Filters != null) queryParams.Add("filters", apiClient.ParameterToString(Filters)); // query parameter
       
-       if (AccessToken != null) headerParams.Add("access-token", apiClient.ParameterToString(AccessToken)); // header parameter
        if (ClientId != null) headerParams.Add("client_id", apiClient.ParameterToString(ClientId)); // header parameter
       
       
